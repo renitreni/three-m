@@ -11,7 +11,8 @@
                         {{ __("Authorized Car Care Serivces") }}
                     </p>
                     <p data-aos="fade-up" data-aos-delay="200">
-                        <a href="#" class="btn btn-primary btn-lg">{{ __("Book An Appointment!") }}</a>
+                        <a href="{{ route('booking') }}"
+                           class="btn btn-primary btn-lg">{{ __("Book An Appointment!") }}</a>
                     </p>
                 </div>
             </div>

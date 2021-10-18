@@ -12,7 +12,7 @@
     <div class="container">
         <div class="row align-items-center position-relative">
             <div class="site-logo">
-                <a href="{{ route('homepage') }}">
+                <a href="{{ route('landing') }}">
                     <img src="{{ asset('images/3M_Logo.png') }}" class="img-fluid">
                 </a>
             </div>

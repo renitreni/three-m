@@ -10,6 +10,7 @@
     <link rel="stylesheet" href="{{ asset('theme/css/style_2.css') }}">
     <link rel="stylesheet" href="{{ asset('theme/css/main.css') }}">
     <link rel="stylesheet" href="{{ asset('vendor/fontawesome/css/all.min.css') }}">
+    @yield('header')
 </head>
 <body data-spy="scroll" data-target=".site-navbar-target" data-offset="300">
 
@@ -19,202 +20,7 @@
 
     @include('layouts.partials.menu')
 
-    @include('layouts.partials.carousel')
-
-    @include('layouts.partials.services-section')
-
-    @include('layouts.partials.mission-vision')
-
-    @include('layouts.partials.about-section')
-
-    <div class="site-section" id="team-section">
-        <div class="container">
-            <div class="row mb-5 justify-content-center">
-                <div class="col-md-7 text-center">
-                    <div class="block-heading-1" data-aos="fade-up" data-aos-delay="">
-                        <h2>Our Team</h2>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Facere at delectus laudantium,
-                            deserunt, atque eveniet. Voluptatem, fuga quos rerum inventore.</p>
-                    </div>
-                </div>
-            </div>
-            <div class="row">
-                <div class="col-lg-4 col-md-6 mb-4" data-aos="fade-up">
-                    <div class="block-team-member-1 text-center rounded">
-                        <figure>
-                            <img src="theme/skater/images/xperson_1.jpg.pagespeed.ic.nwdjnpr6_s.jpg" alt="Image"
-                                 class="img-fluid rounded-circle">
-                        </figure>
-                        <h3 class="font-size-20 text-black">Jean Smith</h3>
-                        <span class="d-block font-gray-5 letter-spacing-1 text-uppercase font-size-12 mb-3">Skateboard Trainer</span>
-                        <div class="block-social-1">
-                            <a href="#" class="btn border-w-2 rounded primary-primary-outline--hover"><span
-                                    class="icon-facebook"></span></a>
-                            <a href="#" class="btn border-w-2 rounded primary-primary-outline--hover"><span
-                                    class="icon-twitter"></span></a>
-                            <a href="#" class="btn border-w-2 rounded primary-primary-outline--hover"><span
-                                    class="icon-instagram"></span></a>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-4 col-md-6 mb-4" data-aos="fade-up" data-aos-delay="100">
-                    <div class="block-team-member-1 text-center rounded">
-                        <figure>
-                            <img src="theme/skater/images/xperson_2.jpg.pagespeed.ic.nyu4ufzm3y.jpg" alt="Image"
-                                 class="img-fluid rounded-circle">
-                        </figure>
-                        <h3 class="font-size-20 text-black">Bob Carry</h3>
-                        <span class="d-block font-gray-5 letter-spacing-1 text-uppercase font-size-12 mb-3">Skateboard Trainer</span>
-                        <div class="block-social-1">
-                            <a href="#" class="btn border-w-2 rounded primary-primary-outline--hover"><span
-                                    class="icon-facebook"></span></a>
-                            <a href="#" class="btn border-w-2 rounded primary-primary-outline--hover"><span
-                                    class="icon-twitter"></span></a>
-                            <a href="#" class="btn border-w-2 rounded primary-primary-outline--hover"><span
-                                    class="icon-instagram"></span></a>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-4 col-md-6 mb-4" data-aos="fade-up" data-aos-delay="200">
-                    <div class="block-team-member-1 text-center rounded">
-                        <figure>
-                            <img src="theme/skater/images/xperson_1.jpg.pagespeed.ic.nwdjnpr6_s.jpg" alt="Image"
-                                 class="img-fluid rounded-circle">
-                        </figure>
-                        <h3 class="font-size-20 text-white">Ricky Fisher</h3>
-                        <span class="d-block font-gray-5 letter-spacing-1 text-uppercase font-size-12 mb-3">Skateboard Trainer</span>
-                        <div class="block-social-1">
-                            <a href="#" class="btn border-w-2 rounded primary-primary-outline--hover"><span
-                                    class="icon-facebook"></span></a>
-                            <a href="#" class="btn border-w-2 rounded primary-primary-outline--hover"><span
-                                    class="icon-twitter"></span></a>
-                            <a href="#" class="btn border-w-2 rounded primary-primary-outline--hover"><span
-                                    class="icon-instagram"></span></a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-</div>
-
-<div class="site-section block-13" id="testimonials-section" data-aos="fade">
-    <div class="container">
-        <div class="text-center mb-5">
-            <div class="block-heading-1">
-                <h2>Testimonial</h2>
-            </div>
-        </div>
-        <div class="owl-carousel nonloop-block-13">
-            <div>
-                <div class="block-testimony-1 text-center">
-                    <blockquote class="mb-4">
-                        <p>&ldquo;Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolorem, fugit excepturi
-                            sapiente voluptatum nulla odio quaerat quibusdam tempore similique doloremque veritatis et
-                            cupiditate, maiores cumque repudiandae explicabo tempora deserunt consequuntur?&rdquo;</p>
-                    </blockquote>
-                    <figure>
-                        <img src="theme/skater/images/xperson_1.jpg.pagespeed.ic.nwdjnpr6_s.jpg" alt="Image"
-                             class="img-fluid rounded-circle mx-auto">
-                    </figure>
-                    <h3 class="font-size-20 text-black">Ricky Fisher</h3>
-                </div>
-            </div>
-            <div>
-                <div class="block-testimony-1 text-center">
-                    <figure>
-                        <img src="theme/skater/images/xperson_2.jpg.pagespeed.ic.nyu4ufzm3y.jpg" alt="Image"
-                             class="img-fluid rounded-circle mx-auto">
-                    </figure>
-                    <h3 class="font-size-20 mb-4 text-black">Ken Davis</h3>
-                    <blockquote class="mb-4">
-                        <p>&ldquo;Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolorem, fugit excepturi
-                            sapiente voluptatum nulla odio quaerat quibusdam tempore similique doloremque veritatis et
-                            cupiditate, maiores cumque repudiandae explicabo tempora deserunt consequuntur?&rdquo;</p>
-                    </blockquote>
-                </div>
-            </div>
-            <div>
-                <div class="block-testimony-1 text-center">
-                    <blockquote class="mb-4">
-                        <p>&ldquo;Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolorem, fugit excepturi
-                            sapiente voluptatum nulla odio quaerat quibusdam tempore similique doloremque veritatis et
-                            cupiditate, maiores cumque repudiandae explicabo tempora deserunt consequuntur?&rdquo;</p>
-                    </blockquote>
-                    <figure>
-                        <img src="theme/skater/images/xperson_1.jpg.pagespeed.ic.nwdjnpr6_s.jpg" alt="Image"
-                             class="img-fluid rounded-circle mx-auto">
-                    </figure>
-                    <h3 class="font-size-20 text-black">Mellisa Griffin</h3>
-                </div>
-            </div>
-            <div>
-                <div class="block-testimony-1 text-center">
-                    <figure>
-                        <img src="theme/skater/images/xperson_3.jpg.pagespeed.ic.walfsw8psv.jpg" alt="Image"
-                             class="img-fluid rounded-circle mx-auto">
-                    </figure>
-                    <h3 class="font-size-20 mb-4 text-black">Robert Steward</h3>
-                    <blockquote class="mb-4">
-                        <p>&ldquo;Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolorem, fugit excepturi
-                            sapiente voluptatum nulla odio quaerat quibusdam tempore similique doloremque veritatis et
-                            cupiditate, maiores cumque repudiandae explicabo tempora deserunt consequuntur?&rdquo;</p>
-                    </blockquote>
-                </div>
-            </div>
-        </div>
-    </div>
-</div>
-
-<div class="site-section" id="contact-section">
-    <div class="container">
-        <div class="row">
-            <div class="col-12 text-center mb-5" data-aos="fade-up" data-aos-delay="">
-                <div class="block-heading-1">
-                    <span>Get In Touch</span>
-                    <h2>Contact Me</h2>
-                </div>
-            </div>
-        </div>
-        <div class="row">
-            <div class="col-lg-6 mb-5" data-aos="fade-up" data-aos-delay="100">
-                <form action="#" method="post">
-                    <div class="form-group row">
-                        <div class="col-md-6 mb-4 mb-lg-0">
-                            <input type="text" class="form-control" placeholder="First name">
-                        </div>
-                        <div class="col-md-6">
-                            <input type="text" class="form-control" placeholder="First name">
-                        </div>
-                    </div>
-                    <div class="form-group row">
-                        <div class="col-md-12">
-                            <input type="text" class="form-control" placeholder="Email address">
-                        </div>
-                    </div>
-                    <div class="form-group row">
-                        <div class="col-md-12">
-                            <textarea name="" id="" class="form-control" placeholder="Write your message." cols="30"
-                                      rows="10"></textarea>
-                        </div>
-                    </div>
-                    <div class="form-group row">
-                        <div class="col-md-6 ml-auto">
-                            <input type="submit" class="btn btn-block btn-primary text-white py-3 px-5"
-                                   value="Send Message">
-                        </div>
-                    </div>
-                </form>
-            </div>
-            <div class="col-lg-4 ml-auto" data-aos="fade-up" data-aos-delay="200">
-                <h2 class="text-primary">Need to know more on details. Get In Touch</h2>
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolores, distinctio! Harum quibusdam nisi,
-                    illum nulla aspernatur aut quidem aperiam, quae non tempora recusandae voluptatibus fugit
-                    impedit.</p>
-                <p><a href="#" class="btn btn-primary text-white">Get Started</a></p>
-            </div>
-        </div>
-    </div>
+    @yield('content')
 </div>
 
 <footer class="site-footer">
@@ -293,5 +99,6 @@
 <script src="{{ asset('theme/theme/skater/js/main.js') }}"></script>
 <script async src="https://www.googletagmanager.com/gtag/js?id=UA-23581568-13"></script>
 
+@yield('scripts')
 </body>
 </html>

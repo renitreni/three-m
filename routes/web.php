@@ -13,12 +13,12 @@ use App\Http\Controllers\DefaultsController;
 Auth::routes();
 
 Route::group(['middleware' => ['web']], function () {
-    Route::get('/', [HomePageController::class, 'homepage'])->name('homepage');
+    Route::get('/', [HomePageController::class, 'landing'])->name('landing');
+    Route::get('/booking', [HomePageController::class, 'booking'])->name('booking');
 });
 
 Route::group(['middleware' => ['web', 'auth']], function () {
     Route::get('/logout', [LoginController::class, 'logout'])->name('logout');
-
     Route::prefix('services')->group(function () {
         Route::get('/', [ServiceController::class, 'index'])->name('services');
         Route::post('/table', [ServiceController::class, 'table'])->name('services.table');

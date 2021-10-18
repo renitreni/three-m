@@ -6,8 +6,13 @@ use Illuminate\Http\Request;
 
 class HomePageController extends Controller
 {
-    public function homepage()
+    public function landing()
     {
-        return view('layouts.homepage');
+        return view('landing');
+    }
+
+    public function booking()
+    {
+        return view('booking');
     }
 }
