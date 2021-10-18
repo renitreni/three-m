@@ -2,6 +2,7 @@
 
 namespace Database\Seeders;
 
+use App\Models\Service;
 use App\Models\User;
 use Silber\Bouncer\Bouncer;
 use Illuminate\Database\Seeder;
@@ -12,7 +13,7 @@ class DatabaseSeeder extends Seeder
     /**
      * Seed the application's database.
      *
-     * @param \Silber\Bouncer\Bouncer $bouncer
+     * @param  \Silber\Bouncer\Bouncer  $bouncer
      * @return void
      */
     public function run(Bouncer $bouncer)
@@ -24,7 +25,7 @@ class DatabaseSeeder extends Seeder
             'email'    => 'renier.trenuela@gmail.com',
             'password' => Hash::make('password'),
         ]);
-        $user       = $bouncer->role()->firstOrCreate([
+        $user = $bouncer->role()->firstOrCreate([
             'name'  => 'user',
             'title' => 'User',
         ]);
@@ -37,28 +38,99 @@ class DatabaseSeeder extends Seeder
             'password' => Hash::make('password'),
         ]);
 
-        $admin       = $bouncer->role()->firstOrCreate([
+        $admin = $bouncer->role()->firstOrCreate([
             'name'  => 'admin',
             'title' => 'Administrator',
         ]);
+
         $bouncer->assign($admin)->to($admin_model);
+        $bouncer->allow($admin)->everything();
 
-        $manage_users = $bouncer->ability()->firstOrCreate([
-            'name'  => 'manage-users',
-            'title' => 'Manage Users',
-        ]);
-        $bouncer->allow($admin)->to($manage_users);
+        $services = [
+            [
+                'name'        => 'Protection and Repair or broken glass and scratches',
+                'desc'        => 'sample',
+                'price'       => 0,
+                'promo_price' => 0,
+                'is_promo'    => 0,
+                'photo'       => null,
+            ],
+            [
+                'name'        => 'Nanoceramic',
+                'desc'        => 'sample',
+                'price'       => 0,
+                'promo_price' => 0,
+                'is_promo'    => 0,
+                'photo'       => null,
+            ],
+            [
+                'name'        => 'Heat Insulating Shading',
+                'desc'        => 'sample',
+                'price'       => 0,
+                'promo_price' => 0,
+                'is_promo'    => 0,
+                'photo'       => null,
+            ],
+            [
+                'name'        => 'Sand Protection',
+                'desc'        => 'sample',
+                'price'       => 0,
+                'promo_price' => 0,
+                'is_promo'    => 0,
+                'photo'       => null,
+            ],
+            [
+                'name'        => 'Car Cooling',
+                'desc'        => 'sample',
+                'price'       => 0,
+                'promo_price' => 0,
+                'is_promo'    => 0,
+                'photo'       => null,
+            ],
+            [
+                'name'        => 'Polishing with Protection',
+                'desc'        => 'sample',
+                'price'       => 0,
+                'promo_price' => 0,
+                'is_promo'    => 0,
+                'photo'       => null,
+            ],
+            [
+                'name'        => 'Light Sandbox Removal',
+                'desc'        => 'sample',
+                'price'       => 0,
+                'promo_price' => 0,
+                'is_promo'    => 0,
+                'photo'       => null,
+            ],
+            [
+                'name'        => 'Rust Protection',
+                'desc'        => 'sample',
+                'price'       => 0,
+                'promo_price' => 0,
+                'is_promo'    => 0,
+                'photo'       => null,
+            ],
+            [
+                'name'        => 'Car Paint',
+                'desc'        => 'sample',
+                'price'       => 0,
+                'promo_price' => 0,
+                'is_promo'    => 0,
+                'photo'       => null,
+            ],
+            [
+                'name'        => 'Distinctive Laundry',
+                'desc'        => 'sample',
+                'price'       => 0,
+                'promo_price' => 0,
+                'is_promo'    => 0,
+                'photo'       => null,
+            ],
+        ];
 
-        $users = $bouncer->ability()->firstOrCreate([
-            'name'  => 'users',
-            'title' => 'Users',
-        ]);
-        $bouncer->allow($admin)->to($users);
-
-        $roles = $bouncer->ability()->firstOrCreate([
-            'name'  => 'roles',
-            'title' => 'Roles',
-        ]);
-        $bouncer->allow($admin)->to($roles);
+        foreach ($services as $service) {
+            Service::create($service);
+        }
     }
 }

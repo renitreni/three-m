@@ -1,6 +1,8 @@
 <?php
 
+use App\Http\Controllers\Auth\LoginController;
 use App\Http\Controllers\HomePageController;
+use App\Http\Controllers\ServiceController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\DashboardController;
 use App\Http\Controllers\UsersController;
@@ -15,8 +17,14 @@ Route::group(['middleware' => ['web']], function () {
 });
 
 Route::group(['middleware' => ['web', 'auth']], function () {
-    Route::get('/logout', [\App\Http\Controllers\Auth\LoginController::class, 'logout'])->name('logout');
+    Route::get('/logout', [LoginController::class, 'logout'])->name('logout');
 
+    Route::prefix('services')->group(function () {
+        Route::get('/', [ServiceController::class, 'index'])->name('services');
+        Route::post('/table', [ServiceController::class, 'table'])->name('services.table');
+        Route::post('/store', [ServiceController::class, 'store'])->name('services.store');
+        Route::post('/delete', [ServiceController::class, 'destroy'])->name('services.delete');
+    });
     Route::prefix('admin')->group(function () {
         Route::post('/sidebar', [DefaultsController::class, 'sidebar'])->name('sidebar');
         Route::post('/footer', [DefaultsController::class, 'footer'])->name('footer');

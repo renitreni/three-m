@@ -14,8 +14,8 @@
                     <div class="icon mb-3">
                         <span class="fas fa-award"></span>
                     </div>
-                    <h3 class="mb-3 text-white">@{{ item.title }}</h3>
-                    @{{ item.description }}
+                    <h3 class="mb-3 text-white">@{{ item.name }}</h3>
+                    @{{ item.desc }}
                 </div>
             </div>
         </div>
@@ -27,32 +27,7 @@
         el: '#services-section',
         data() {
             return {
-                services: {
-                    0: {
-                        title: "{{ __('Nano Ceramic') }}",
-                        description: "{{ __('sample description') }}",
-                    },
-                    1: {
-                        title: "{{ __('Car Coloring') }}",
-                        description: "{{ __('sample description') }}",
-                    },
-                    2: {
-                        title: "{{ __('Rust Protection') }}",
-                        description: "{{ __('sample description') }}",
-                    },
-                    3: {
-                        title: "{{ __('Car Polishing') }}",
-                        description: "{{ __('sample description') }}",
-                    },
-                    4: {
-                        title: "{{ __('Distinctive Laundry') }}",
-                        description: "{{ __('sample description') }}",
-                    },
-                    5: {
-                        title: "{{ __('Sand Protection') }}",
-                        description: "{{ __('sample description') }}",
-                    }
-                }
+                services: {!! \App\Models\Service::query()->select(['name', 'desc'])->get() !!}
             }
         }
     });
