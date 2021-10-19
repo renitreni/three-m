@@ -15,6 +15,7 @@ Auth::routes();
 Route::group(['middleware' => ['web']], function () {
     Route::get('/', [HomePageController::class, 'landing'])->name('landing');
     Route::get('/booking', [HomePageController::class, 'booking'])->name('booking');
+    Route::post('/reserve', [HomePageController::class, 'reserve'])->name('reserve');
 });
 
 Route::group(['middleware' => ['web', 'auth']], function () {

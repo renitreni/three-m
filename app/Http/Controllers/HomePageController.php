@@ -15,4 +15,9 @@ class HomePageController extends Controller
     {
         return view('booking');
     }
+
+    public function reserve(Request $request)
+    {
+        dump($request->all());
+    }
 }

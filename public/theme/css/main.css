@@ -1,3 +1,7 @@
 .site-navbar .site-logo {
     width: 7%;
 }
+
+.site-navbar .site-logo {
+    position: relative !important;
+}
