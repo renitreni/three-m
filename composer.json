@@ -13,6 +13,7 @@
         "laravel/framework": "^8.40",
         "laravel/tinker": "^2.5",
         "laravel/ui": "^3.3",
+        "realrashid/sweet-alert": "^4.0",
         "silber/bouncer": "v1.0.0-rc.10",
         "yajra/laravel-datatables": "^1.5"
     },

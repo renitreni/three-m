@@ -17,16 +17,25 @@
             </div>
             <div class="row">
                 <div class="col-lg-8 mb-5" data-aos="fade-up" data-aos-delay="100">
-                    <form action="#" method="post">
+                    <form action="{{ route('reserve') }}" method="post">
+                        @csrf
                         <div class="form-group row">
                             <div class="col-md-6 mb-lg-0">
                                 <label>Choose date of Appointment</label>
                                 <input type="text" name="appoint_date" class="form-control">
+
+                                @error('appoint_date')
+                                <p class="fst-normal bg-danger text-white ps-2">{{ $message }}</p>
+                                @enderror
                             </div>
                             <div class="col-md-6 mb-lg-0">
                                 <label>Car Model</label>
                                 <input type="text" name="car_model" class="form-control"
                                        placeholder="Type in Car Model">
+
+                                @error('car_model')
+                                    <p class="fst-normal bg-danger text-white ps-2">{{ $message }}</p>
+                                @enderror
                             </div>
                         </div>
                         <div class="form-group row">
@@ -36,6 +45,9 @@
                                     <option value="riyadh" selected>Riyadh</option>
                                     <option value="jeddah">Jeddah</option>
                                 </select>
+                                @error('branch')
+                                <p class="fst-normal bg-danger text-white ps-2">{{ $message }}</p>
+                                @enderror
                             </div>
                             <div class="col-md-6">
                                 <label>Choose a Service</label>
@@ -44,6 +56,9 @@
                                         <option value="{{ $item->name }}">{{ $item->name }}</option>
                                     @endforeach
                                 </select>
+                                @error('service')
+                                <p class="fst-normal bg-danger text-white ps-2">{{ $message }}</p>
+                                @enderror
                             </div>
                         </div>
                         <div class="form-group row">
@@ -51,6 +66,10 @@
                             <div class="col-md-12">
                                 <input type="email" name="email" class="form-control"
                                        placeholder="Type in Email address">
+
+                                @error('email')
+                                <p class="fst-normal bg-danger text-white ps-2">{{ $message }}</p>
+                                @enderror
                             </div>
                         </div>
                         <div class="form-group row">
@@ -58,6 +77,9 @@
                             <div class="col-md-12">
                                 <input type="text" name="contact_no" class="form-control"
                                        placeholder="Type in Contact Number">
+                                @error('contact_no')
+                                <p class="fst-normal bg-danger text-white ps-2">{{ $message }}</p>
+                                @enderror
                             </div>
                         </div>
                         <div class="form-group row">
@@ -66,6 +88,9 @@
                                 <textarea name="remarks" class="form-control" placeholder="Write your message."
                                           cols="30"
                                           rows="10"></textarea>
+                                @error('remarks')
+                                <p class="fst-normal bg-danger text-white ps-2">{{ $message }}</p>
+                                @enderror
                             </div>
                         </div>
                         <div class="form-group row">
@@ -115,6 +140,7 @@
 @section('scripts')
     <script type="text/javascript" src="https://cdn.jsdelivr.net/momentjs/latest/moment.min.js"></script>
     <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/daterangepicker/daterangepicker.min.js"></script>
+    @include('sweetalert::alert')
     <script>
         $('input[name="appoint_date"]').daterangepicker({
             singleDatePicker: true,
