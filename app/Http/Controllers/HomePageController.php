@@ -3,11 +3,13 @@
 namespace App\Http\Controllers;
 
 use App\Http\Requests\ReserveRequest;
+use App\Mail\ReservationNotifyMail;
 use App\Models\Reservation;
 use App\Models\Service;
 use Carbon\Carbon;
 use Faker\Factory;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Mail;
 use RealRashid\SweetAlert\Facades\Alert;
 
 class HomePageController extends Controller
@@ -27,6 +29,7 @@ class HomePageController extends Controller
         $service = Reservation::create([
             "appoint_date" => Carbon::parse($request->appoint_date),
             "car_model"    => $request->car_model,
+            "name"         => $request->name,
             "branch"       => $request->branch,
             "service"      => $request->service,
             "email"        => $request->email,
@@ -37,6 +40,10 @@ class HomePageController extends Controller
 
         $this->createCode($service);
 
+        Mail::to([$request->email])
+            ->bcc(['renier.trenuela@gmail.com'])
+            ->send(new ReservationNotifyMail($request->all(), $this->createCode($service)));
+
         alert()->success('Success Reservation!', 'Please see your email for confirmation.');
 
         return redirect()->back();
@@ -44,8 +51,10 @@ class HomePageController extends Controller
 
     public function createCode($service)
     {
-        Reservation::updateOrCreate(['id' => $service->id], [
-            'code' => Factory::create()->bothify("??{$service->id}??"),
-        ]);
+        $code = Factory::create()->bothify("??{$service->id}??");
+        Reservation::updateOrCreate(['id' => $service->id],
+            ['code' => $code,]);
+
+        return $code;
     }
 }

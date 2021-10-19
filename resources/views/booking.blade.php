@@ -62,6 +62,17 @@
                             </div>
                         </div>
                         <div class="form-group row">
+                            <label>Name</label>
+                            <div class="col-md-12">
+                                <input type="text" name="name" class="form-control"
+                                       placeholder="Type in Email address">
+
+                                @error('name')
+                                <p class="fst-normal bg-danger text-white ps-2">{{ $message }}</p>
+                                @enderror
+                            </div>
+                        </div>
+                        <div class="form-group row">
                             <label>Email Address</label>
                             <div class="col-md-12">
                                 <input type="email" name="email" class="form-control"

@@ -12,6 +12,7 @@ class Reservation extends Model
     protected $fillable = [
         "appoint_date",
         "car_model",
+        "name",
         "branch",
         "service",
         "email",

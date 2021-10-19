@@ -25,6 +25,7 @@ class ReserveRequest extends FormRequest
     {
         return [
             "appoint_date" => 'required|date',
+            "name"         => 'required',
             "car_model"    => 'required',
             "branch"       => 'required',
             "service"      => 'required',
