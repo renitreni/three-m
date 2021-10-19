@@ -65,7 +65,7 @@
                             <label>Name</label>
                             <div class="col-md-12">
                                 <input type="text" name="name" class="form-control"
-                                       placeholder="Type in Email address">
+                                       placeholder="Type in your name...">
 
                                 @error('name')
                                 <p class="fst-normal bg-danger text-white ps-2">{{ $message }}</p>
