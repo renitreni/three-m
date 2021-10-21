@@ -12,11 +12,12 @@ class DefaultsController extends Controller
     public function sidebar(Bouncer $bouncer)
     {
         return [
-            'appname'  => config('app.name'),
-            'home'     => route('home'),
-            'roles'    => $bouncer->can('roles') ? route('roles') : null,
-            'users'    => $bouncer->can('users') ? route('users') : null,
-            'services' => $bouncer->can('services') ? route('services') : null,
+            'appname'     => config('app.name'),
+            'home'        => route('home'),
+            'roles'       => $bouncer->can('roles') ? route('roles') : null,
+            'users'       => $bouncer->can('users') ? route('users') : null,
+            'services'    => $bouncer->can('services') ? route('services') : null,
+            'reservation' => $bouncer->can('reservation') ? route('reservation') : null,
         ];
     }
 

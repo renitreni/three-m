@@ -26,6 +26,14 @@
                                 <i class="fas fa-wrench"></i> <span class="align-middle">Services</span>
                             </inertia-link>
                         </li>
+
+                        <li class="sidebar-item" v-if="sidebar.reservation"
+                            :class="{'active': isActive(sidebar.reservation)}">
+                            <inertia-link class="sidebar-link" v-bind:href="sidebar.reservation">
+                                <i class="fas fa-calendar-day"></i> <span class="align-middle">Reservation</span>
+                            </inertia-link>
+                        </li>
+
                         <!-- Manage Users-->
                         <li class="sidebar-item"
                             v-if="isUrl(sidebar.roles) || isUrl(sidebar.users)"

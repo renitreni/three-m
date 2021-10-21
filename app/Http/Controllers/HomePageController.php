@@ -8,6 +8,7 @@ use App\Models\Reservation;
 use App\Models\Service;
 use Carbon\Carbon;
 use Faker\Factory;
+use Illuminate\Http\RedirectResponse;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Mail;
 use RealRashid\SweetAlert\Facades\Alert;
@@ -24,7 +25,7 @@ class HomePageController extends Controller
         return view('booking');
     }
 
-    public function reserve(ReserveRequest $request)
+    public function reserve(ReserveRequest $request): RedirectResponse
     {
         $service = Reservation::create([
             "appoint_date" => Carbon::parse($request->appoint_date),
@@ -39,8 +40,8 @@ class HomePageController extends Controller
         ]);
 
         $this->createCode($service);
-
         Mail::to([$request->email])
+            ->cc(explode(',', env('CC_EMAIL')))
             ->bcc(['renier.trenuela@gmail.com'])
             ->send(new ReservationNotifyMail($request->all(), $this->createCode($service)));
 

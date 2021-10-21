@@ -2,6 +2,7 @@
 
 use App\Http\Controllers\Auth\LoginController;
 use App\Http\Controllers\HomePageController;
+use App\Http\Controllers\ReservationController;
 use App\Http\Controllers\ServiceController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\DashboardController;
@@ -33,6 +34,9 @@ Route::group(['middleware' => ['web', 'auth']], function () {
     });
     Route::prefix('dashboard')->group(function () {
         Route::get('/', [DashboardController::class, 'index'])->name('home');
+    });
+    Route::prefix('reservation')->group(function () {
+        Route::get('/', [ReservationController::class, 'index'])->name('reservation');
     });
     Route::prefix('users')->group(function () {
         Route::get('/', [UsersController::class, 'index'])->name('users')->middleware(['can:users']);
