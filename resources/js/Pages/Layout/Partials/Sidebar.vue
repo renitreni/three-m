@@ -23,7 +23,7 @@
                         <li class="sidebar-item" v-if="sidebar.services"
                             :class="{'active': isActive(sidebar.services)}">
                             <inertia-link class="sidebar-link" v-bind:href="sidebar.services">
-                                <i class="fas fa-wrench"></i> <span class="align-middle">Services</span>
+                                <i class="fas fa-car-crash"></i> <span class="align-middle">Services</span>
                             </inertia-link>
                         </li>
 

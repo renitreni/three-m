@@ -30,9 +30,11 @@
                             </div>
                             <div class="col-md-6 mb-lg-0">
                                 <label>Car Model</label>
-                                <input type="text" name="car_model" class="form-control"
-                                       placeholder="Type in Car Model">
-
+                                <select type="text" class="form-control" name="car_model">
+                                    @foreach(\App\Models\Car::all() as $item)
+                                        <option value="{{ $item->name }}">{{ $item->name }}</option>
+                                    @endforeach
+                                </select>
                                 @error('car_model')
                                     <p class="fst-normal bg-danger text-white ps-2">{{ $message }}</p>
                                 @enderror
@@ -66,7 +68,6 @@
                             <div class="col-md-12">
                                 <input type="text" name="name" class="form-control"
                                        placeholder="Type in your name...">
-
                                 @error('name')
                                 <p class="fst-normal bg-danger text-white ps-2">{{ $message }}</p>
                                 @enderror

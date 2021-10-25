@@ -26,6 +26,9 @@ Route::group(['middleware' => ['web', 'auth']], function () {
         Route::post('/table', [ServiceController::class, 'table'])->name('services.table');
         Route::post('/store', [ServiceController::class, 'store'])->name('services.store');
         Route::post('/delete', [ServiceController::class, 'destroy'])->name('services.delete');
+        Route::post('/cars', [ServiceController::class, 'cars'])->name('services.table.cars');
+        Route::post('/car/store', [ServiceController::class, 'carStore'])->name('car.store');
+        Route::post('/car/delete', [ServiceController::class, 'carDestroy'])->name('car.delete');
     });
     Route::prefix('admin')->group(function () {
         Route::post('/sidebar', [DefaultsController::class, 'sidebar'])->name('sidebar');
