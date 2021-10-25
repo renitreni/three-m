@@ -1,18 +1,14 @@
 <template>
     <Admin>
-        <div>
-            Hi!
-        </div>
+        Hi!
     </Admin>
 </template>
 
 <script>
-    import Admin from "./Layout/Admin";
-    export default {
-        components: {Admin},
-        props: {
-            user: Object,
-            app_name: String
-        },
-    }
+import Admin from "./Layout/Admin";
+
+export default {
+    name: 'Dashboard',
+    components: {Admin},
+}
 </script>
