@@ -21,9 +21,23 @@
                         @csrf
                         <div class="form-group row">
                             <div class="col-md-6 mb-lg-0">
+                                <label>Name</label>
+                                <input type="text" name="name" class="form-control"
+                                       placeholder="Type in your name...">
+                                @error('name')
+                                <p class="fst-normal bg-danger text-white ps-2">{{ $message }}</p>
+                                @enderror
+                            </div>
+                            <div class="col-md-6 mb-lg-0">
+                                <label>National ID</label>
+                                <input type="text" name="national_id" class="form-control"
+                                       placeholder="Type in your national ID...">
+                            </div>
+                        </div>
+                        <div class="form-group row">
+                            <div class="col-md-6 mb-lg-0">
                                 <label>Choose date of Appointment</label>
                                 <input type="text" name="appoint_date" class="form-control">
-
                                 @error('appoint_date')
                                 <p class="fst-normal bg-danger text-white ps-2">{{ $message }}</p>
                                 @enderror
@@ -36,7 +50,7 @@
                                     @endforeach
                                 </select>
                                 @error('car_model')
-                                    <p class="fst-normal bg-danger text-white ps-2">{{ $message }}</p>
+                                <p class="fst-normal bg-danger text-white ps-2">{{ $message }}</p>
                                 @enderror
                             </div>
                         </div>
@@ -59,16 +73,6 @@
                                     @endforeach
                                 </select>
                                 @error('service')
-                                <p class="fst-normal bg-danger text-white ps-2">{{ $message }}</p>
-                                @enderror
-                            </div>
-                        </div>
-                        <div class="form-group row">
-                            <label>Name</label>
-                            <div class="col-md-12">
-                                <input type="text" name="name" class="form-control"
-                                       placeholder="Type in your name...">
-                                @error('name')
                                 <p class="fst-normal bg-danger text-white ps-2">{{ $message }}</p>
                                 @enderror
                             </div>
@@ -155,10 +159,14 @@
     @include('sweetalert::alert')
     <script>
         $('input[name="appoint_date"]').daterangepicker({
+            timePicker: true,
             singleDatePicker: true,
             showDropdowns: true,
             minYear: parseInt(moment().format('YYYY'), 10),
-            maxYear: parseInt(moment().add(1, 'Y').format('YYYY'))
+            maxYear: parseInt(moment().add(1, 'Y').format('YYYY')),
+            locale: {
+                format: 'M/DD/YYYY hh:mm A'
+            }
         }, function (start, end, label) {
         });
     </script>

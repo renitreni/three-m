@@ -36,6 +36,7 @@ class HomePageController extends Controller
             "email"        => $request->email,
             "contact_no"   => $request->contact_no,
             "remarks"      => $request->remarks,
+            "national_id"  => $request->national_id,
             "code"         => 'none',
         ]);
 

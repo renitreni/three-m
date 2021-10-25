@@ -19,5 +19,6 @@ class Reservation extends Model
         "contact_no",
         "remarks",
         "code",
+        "national_id",
     ];
 }
