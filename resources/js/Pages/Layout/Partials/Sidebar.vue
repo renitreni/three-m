@@ -5,7 +5,8 @@
                 <div class="sidebar-content js-simplebar">
                     <inertia-link class="sidebar-brand" style="text-decoration: unset;" v-if="sidebar.home"
                                   v-bind:href="sidebar.home">
-                        <span class="align-middle">{{ sidebar.appname }}</span>
+<!--                        <span class="align-middle">{{ sidebar.appname }}</span>-->
+                        <img src="/images/admin_logo.png" class="img-fluid" width="120">
                     </inertia-link>
 
                     <ul class="sidebar-nav">
