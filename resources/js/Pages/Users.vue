@@ -201,7 +201,7 @@
             }
         },
         mounted() {
-            var $this = this;
+            let $this = this;
 
             $this.user_add_modal = new bootstrap.Modal(document.getElementById('user-add-modal'), {
                 keyboard: false
