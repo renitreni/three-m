@@ -16,14 +16,14 @@
                     <ul class="site-menu main-menu js-clone-nav ml-auto d-none d-lg-block">
                         <li><a href="{{ route('landing') }}#home-section" class="nav-link">Home</a></li>
                         <li><a href="{{ route('landing') }}#services-section" class="nav-link">Services</a></li>
-                        <li class="has-children">
-                            <a href="{{ route('landing') }}#about-section" class="nav-link">About</a>
-                            <ul class="dropdown arrow-top">
-                                <li><a href="{{ route('landing') }}#team-section" class="nav-link">Team</a></li>
-                                <li><a href="{{ route('landing') }}#faq-section" class="nav-link">FAQ</a></li>
-                            </ul>
-                        </li>
-                        <li><a href="{{ route('landing') }}#testimonials-section" class="nav-link">Testimonials</a></li>
+{{--                        <li class="has-children">--}}
+{{--                            <a href="{{ route('landing') }}#about-section" class="nav-link">About</a>--}}
+{{--                            <ul class="dropdown arrow-top">--}}
+{{--                                <li><a href="{{ route('landing') }}#team-section" class="nav-link">Team</a></li>--}}
+{{--                                <li><a href="{{ route('landing') }}#faq-section" class="nav-link">FAQ</a></li>--}}
+{{--                            </ul>--}}
+{{--                        </li>--}}
+                        <li><a href="{{ route('landing') }}#procedures" class="nav-link">Procedures</a></li>
                         <li><a href="{{ route('landing') }}#contact-section" class="nav-link">Contact</a></li>
                     </ul>
                 </nav>
