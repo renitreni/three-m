@@ -25,8 +25,8 @@ class HomePageController extends Controller
         return view('booking');
     }
 
-    public function reserve(ReserveRequest $request): RedirectResponse
-    {
+    public function reserve(ReserveRequest $request)
+    : RedirectResponse {
         $service = Reservation::create([
             "appoint_date" => Carbon::parse($request->appoint_date),
             "car_model"    => $request->car_model,
@@ -48,8 +48,8 @@ class HomePageController extends Controller
 //        $this->itexmo($request->contact_no, "Hi {$request->name}, please see email for more details
 //        {$request->service} at {$request->appoint_date}
 //        Thanks, LH - 3M");
-
-        $this->itexmo($request->contact_no, "Booked from LH-3M, Please see your email.");
+        $message = "$request->national_id,$request->contact_no,$request->car_model";
+        $this->itexmo($request->contact_no, $message);
 
         alert()->success('Success Reservation!', 'Please see your email for confirmation.');
 
@@ -66,7 +66,7 @@ class HomePageController extends Controller
 
     public function itexmo($number, $message)
     {
-        $ch = curl_init();
+        $ch     = curl_init();
         $itexmo = ['1' => $number, '2' => $message, '3' => env('ITEXMO_API_CODE'), 'passwd' => env('ITEXMO_API_PASS')];
         curl_setopt($ch, CURLOPT_URL, "https://www.itexmo.com/php_api/api.php");
         curl_setopt($ch, CURLOPT_POST, 1);
