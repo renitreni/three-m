@@ -29,9 +29,18 @@
             <div class="col-md-6">
                 <div class="row">
                     <div class="col-md-8">
-                        <h2 class="footer-heading mb-4">About Us</h2>
-                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Neque facere laudantium magnam
-                            voluptatum autem. Amet aliquid nesciunt veritatis aliquam.</p>
+                        <div class="row">
+                            <div class="col-12 mb-3">
+                                <h2 class="footer-heading mb-3">Address</h2>
+                                <p class="fw-bold m-0">Luxury Horizon.</p>
+                                <p>Anas bin Malik St., Malqa District</p>
+                            </div>
+                            <div class="col-12">
+                                <h2 class="footer-heading mb-3">CALL US</h2>
+                                <p><i class="fas fa-phone mr-2"></i> +966 11 485 5600</p>
+                                <p><i class="fas fa-mobile mr-2"></i> +966 5311 30606</p>
+                            </div>
+                        </div>
                     </div>
                     <div class="col-md-4 ml-auto">
                         <h2 class="footer-heading mb-4">Features</h2>
@@ -64,7 +73,8 @@
                 <a href="#about-section" class="smoothscroll pl-0 pr-3"><span class="icon-facebook"></span></a>
                 <a href="#" class="pl-3 pr-3"><span class="icon-twitter"></span></a>
                 <a href="#" class="pl-3 pr-3"><span class="icon-instagram"></span></a>
-                <a href="#" class="pl-3 pr-3"><span class="icon-linkedin"></span></a>
+                <a href="#" class="pl-3 pr-3"><span class="icon-snapchat"></span></a>
+                <a href="#" class="pl-3 pr-3"><span class="icon-facebook"></span></a>
                 </form>
             </div>
         </div>
