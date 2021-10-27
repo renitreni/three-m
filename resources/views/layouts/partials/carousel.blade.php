@@ -12,7 +12,7 @@
                     </p>
                     <p data-aos="fade-up" data-aos-delay="200">
                         <a href="{{ route('booking') }}"
-                           class="btn btn-primary btn-lg">{{ __("Book An Appointment!") }}</a>
+                           class="btn btn-primary btn-lg text-white">{{ __("Book An Appointment!") }}</a>
                     </p>
                 </div>
             </div>
