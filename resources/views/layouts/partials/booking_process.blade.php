@@ -11,7 +11,7 @@
                 </div>
             </div>
         </div>
-        <div class="row justify-content-evenly">
+        <div class="row justify-content-evenly aos-init aos-animate" data-aos="fade-up" data-aos-delay="">
             <div class="col-auto d-flex flex-column">
                 <div class="fs-1 mx-auto" style="color: #ff8b00;"><i class="fas fa-bookmark"></i></div>
                 <div class="fs-5 mx-auto"><label class="text-white fw-bolder">Step 1</label></div>
