@@ -40,11 +40,18 @@
                 </form>
             </div>
             <div class="col-lg-4 ml-auto" data-aos="fade-up" data-aos-delay="200">
-                <h2 class="text-primary">Need to know more on details. Get In Touch</h2>
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolores, distinctio! Harum quibusdam nisi,
-                    illum nulla aspernatur aut quidem aperiam, quae non tempora recusandae voluptatibus fugit
-                    impedit.</p>
-                <p><a href="#" class="btn btn-primary text-white">Get Started</a></p>
+                <div class="row">
+                    <div class="col-12 mb-3">
+                        <h2 class="text-primary mb-3">Address</h2>
+                        <p class="fw-bold m-0">Luxury Horizon.</p>
+                        <p>Anas bin Malik St., Malqa District</p>
+                    </div>
+                    <div class="col-12">
+                        <h2 class="text-primary mb-3">CALL US</h2>
+                        <p><i class="fas fa-phone mr-2"></i> +966 11 485 5600</p>
+                        <p><i class="fas fa-mobile mr-2"></i> +966 5311 30606</p>
+                    </div>
+                </div>
             </div>
         </div>
     </div>
