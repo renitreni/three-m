@@ -72,6 +72,13 @@
                                     <label>Description</label>
                                     <textarea class="form-control" v-model="overview.desc"></textarea>
                                 </div>
+                                <div class="mb-3">
+                                    <label>Photo</label>
+                                    <input class="form-control" v-model="overview.photo">
+                                </div>
+                                <div class="mb-3" v-if="overview.photo">
+                                    <img :src="overview.photo" class="img-fluid">
+                                </div>
                             </div>
                         </div>
                         <div class="modal-footer">
@@ -134,6 +141,7 @@ export default {
                 'price': 0,
                 'promo_price': 0,
                 'is_promo': false,
+                'photo': null
             };
         },
         save() {

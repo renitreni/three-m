@@ -9,13 +9,18 @@
             </div>
         </div>
         <div class="row">
-            <div v-for="item in services" class="col-md-6 col-lg-4 mb-4" data-aos="fade-up" data-aos-delay="">
-                <div class="block__35630">
-                    <div class="icon mb-3">
-                        <span class="fas fa-award"></span>
+            <div v-for="item in services" class="col-md-6 col-lg-4 m-0 p-0" data-aos="fade-up" data-aos-delay="">
+                <div class="card rounded-0 border-0">
+                    <img v-if="item.photo" v-bind:src="item.photo" class="card-img-top rounded-0" width="180px" height="200px">
+                    <img v-else src="https://i.pravatar.cc/150?u=fake@pravatar.com" class="card-img-top rounded-0" width="180px" height="200px">
+
+                    <div class="card-body position-absolute mt-auto h-100 d-flex align-items-end p-0 w-100">
+                        <div class="d-flex flex-column px-2 w-100"
+                             style="background-image: linear-gradient(to right, #000, #3330);">
+                            <p class="card-title fw-bold text-white m-0">@{{ item.name }}</p>
+                            <p class="card-text text-white">@{{ item.desc }}</p>
+                        </div>
                     </div>
-                    <h3 class="mb-3 text-white">@{{ item.name }}</h3>
-                    @{{ item.desc }}
                 </div>
             </div>
         </div>
@@ -27,7 +32,7 @@
         el: '#services-section',
         data() {
             return {
-                services: {!! \App\Models\Service::query()->select(['name', 'desc'])->get() !!}
+                services: {!! \App\Models\Service::query()->select(['name', 'desc', 'photo'])->get() !!}
             }
         }
     });
