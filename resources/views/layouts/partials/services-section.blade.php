@@ -18,7 +18,7 @@
                         <div class="d-flex flex-column px-2 w-100"
                              style="background-image: linear-gradient(to right, #000, #3330);">
                             <p class="card-title fw-bold text-white m-0">@{{ item.name }}</p>
-                            <p class="card-text text-white">@{{ item.desc }}</p>
+                            <p class="card-text text-white lh-sm mb-2">@{{ item.desc }}</p>
                         </div>
                     </div>
                 </div>
