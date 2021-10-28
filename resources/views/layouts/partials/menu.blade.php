@@ -72,7 +72,7 @@
                         {{--                                <li><a href="{{ route('landing') }}#faq-section" class="nav-link">FAQ</a></li>--}}
                         {{--                            </ul>--}}
                         {{--                        </li>--}}
-                        <li><a href="{{ route('landing') }}#procedures" class="nav-link">Procedures</a></li>
+                        <li><a href="{{ route('landing') }}#galleries" class="nav-link">Galleries</a></li>
                         <li><a href="{{ route('landing') }}#contact-section" class="nav-link">Contact</a></li>
                         <li><a href="{{ route('booking') }}"
                                class="btn-primary-glowing btn btn-primary rounded-pill px-3 py-2">Book Now!</a></li>

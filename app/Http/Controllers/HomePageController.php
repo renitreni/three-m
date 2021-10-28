@@ -17,7 +17,9 @@ class HomePageController extends Controller
 {
     public function landing()
     {
-        return view('landing');
+        $gallery = \Storage::disk('local')->allFiles('images/gallery');
+
+        return view('landing', compact('gallery'));
     }
 
     public function booking()
