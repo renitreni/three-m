@@ -82,8 +82,9 @@
                 <div class="border-top pt-5">
                     <p class="copyright">
                         <small>
-                            Copyright &copy;<script>document.write(new Date().getFullYear());</script>
-                        </small></p>
+                            Copyright &copy; <a href="https://www.facebook.com/YaraMay-CMS-1471889562872452" class="text-white fs-6">Yaramay Maintenance Services <script>document.write(new Date().getFullYear());</script></a>
+                        </small>
+                    </p>
                 </div>
             </div>
         </div>
