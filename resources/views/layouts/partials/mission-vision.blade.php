@@ -1,4 +1,4 @@
-<div class="site-section">
+<div class="site-section" id="mission_vision">
     <div class="block__73694 mb-2">
         <div class="container">
             <div class="row d-flex no-gutters align-items-stretch">
