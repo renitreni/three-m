@@ -4,8 +4,8 @@
         <div class="row">
             <div class="col-12 text-center mb-5" data-aos="fade-up" data-aos-delay="">
                 <div class="block-heading-1">
-                    <span>Feedback Section</span>
-                    <h2>It is in our utmost interest to provide services for our Client's satisfaction.</h2>
+                    <h2>Feedback Section</h2>
+                    <span>It is in our utmost interest to provide services for our Client's satisfaction.</span>
                 </div>
             </div>
         </div>
