@@ -35,17 +35,27 @@
                 </div>
                 <div class="col-lg-5 mr-auto p-lg-5 mt-4 mt-lg-0 order-lg-1" data-aos="fade-right"
                      data-aos-delay="">
-                    <h2 class="mb-3 text-primary">My Best Mentor</h2>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ducimus id dignissimos nemo minus
-                        perspiciatis ullam itaque voluptas iure vero, nesciunt unde odit aspernatur distinctio,
-                        maiores facere officiis. Cum, esse, iusto?</p>
+                    <h2 class="mb-3 text-primary">Mission and Vision</h2>
+                    <p>We believe in not accepting the status quo, in constant improvement, and in the value of ongoing
+                        education in any form. We believe in providing opportunity for personal professional and
+                        organizational growth within our company.</p>
                     <p>Minus perspiciatis ullam itaque voluptas iure vero, nesciunt unde odit aspernatur distinctio,
-                        maiores facere officiis. Cum, esse, iusto?</p>
+                        We believe that all decisions are to be made with integrity. Leadership is setting good examples
+                        for others to follow, expecting as much from yourself as from others.</p>
                     <ul class="ul-check primary list-unstyled mt-5">
-                        <li>Lorem ipsum dolor.</li>
-                        <li>Quod, amet. Provident.</li>
-                        <li>Quo, adipisci, quis.</li>
-                        <li>Cumque perspiciatis, blanditiis?</li>
+                        <li>Our goal is to be an industry leader in providing unmatched quality automotive products and
+                            services
+                        </li>
+                        <li>We will constantly strive to meet the changing needs of our customers.</li>
+                        <li>Our aim is to provide an atmosphere that encourages employee teamwork, integrity and
+                            excellence.
+                        </li>
+                        <li>Together we will set and continually improve sales, service and operational standards to
+                            ensure long term market leadership and profitability.
+                        </li>
+                        <li>It is our mission to exceed our customers' and employees' expectations and maintain their
+                            loyalty for a lifetime.
+                        </li>
                     </ul>
                 </div>
             </div>
