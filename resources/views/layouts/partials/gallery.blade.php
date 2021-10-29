@@ -9,17 +9,29 @@
             </div>
         </div>
         <div class="row justify-content-evenly aos-init aos-animate" data-aos="fade-up" data-aos-delay="">
-            <div class="lightbox">
-                <div class="d-flex flex-wrap">
+            <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel">
+                <div class="carousel-indicators">
                     @foreach($gallery as $key => $item)
-                        <img
-                            src="{{ $item }}"
-                            data-mdb-img="{{ $item }}"
-                            alt="Lightbox image 1" style="max-width: 180px"
-                            class="w-100 shadow-1-strong rounded-0 img-fluid zoom"
-                        />
+                        <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="{{ $key }}"
+                                @if($key==0) class="active" aria-current="true" aria-label="Slide {{ $key }}"@endif>
+                        </button>
                     @endforeach
                 </div>
+                <div class="carousel-inner">
+                    @foreach($gallery as $key => $item)
+                        <div class="carousel-item @if($key==0) active @endif">
+                            <img src="{{ $item }}" class="d-block img-fluid mx-auto" alt="{{ $item }}">
+                        </div>
+                    @endforeach
+                </div>
+                <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
+                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Previous</span>
+                </button>
+                <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
+                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Next</span>
+                </button>
             </div>
         </div>
     </div>
