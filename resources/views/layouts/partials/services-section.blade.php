@@ -2,14 +2,16 @@
     <div class="container">
         <div class="row mb-5 justify-content-center">
             <div class="col-md-7 text-center">
-                <div class="block-heading-1" data-aos="fade-up" data-aos-delay="">
+{{--                data-aos="fade-up"--}}
+                <div class="block-heading-1" data-aos-delay="">
                     <h2>{{ __('Services') }}</h2>
                     <p>{{ __('The basis for any successful business is a creative and distinct idea, hence the launch of Luxury Horizon to be the place you trust to take care of your car. In 3M more than one service in one place, this in itself is another sign of excellence.') }}</p>
                 </div>
             </div>
         </div>
         <div class="row">
-            <div v-for="item in services" class="col-md-6 col-lg-4 m-0 p-0" data-aos="fade-up" data-aos-delay="">
+{{--            data-aos="fade-up"--}}
+            <div v-for="item in services" class="col-md-6 col-lg-4 m-0 p-0" data-aos-delay="">
                 <div class="card rounded-0 border-0">
                     <img v-if="item.photo" v-bind:src="item.photo" class="card-img-top rounded-0" width="180px" height="200px">
                     <img v-else src="https://i.pravatar.cc/150?u=fake@pravatar.com" class="card-img-top rounded-0" width="180px" height="200px">

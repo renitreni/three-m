@@ -2,11 +2,13 @@
     <div class="block__73694 mb-2">
         <div class="container">
             <div class="row d-flex no-gutters align-items-stretch">
+{{--                data-aos="fade-right"--}}
                 <div class="col-12 col-lg-6 block__73422"
                      style="background-image:url({{ asset('images/image_blue_car.jpeg') }})"
-                     data-aos="fade-right" data-aos-delay="">
+                     data-aos-delay="">
                 </div>
-                <div class="col-lg-5 ml-auto p-lg-5 mt-4 mt-lg-0" data-aos="fade-left" data-aos-delay="">
+{{--                data-aos="fade-left"--}}
+                <div class="col-lg-5 ml-auto p-lg-5 mt-4 mt-lg-0" data-aos-delay="">
                     <h2 class="mb-3 text-primary">Ahlan Wasahlan to LUXURY HORIZON</h2>
 
                     <p>It has been almost 5 years since we started a car maintenance service company in Riyadh,
@@ -29,11 +31,13 @@
     <div class="block__73694">
         <div class="container">
             <div class="row d-flex no-gutters align-items-stretch">
+{{--                data-aos="fade-left"--}}
                 <div class="col-12 col-lg-6 block__73422 order-lg-2"
                      style="background-image:url({{ asset('images/image_red_car.jpeg') }})"
-                     data-aos="fade-left" data-aos-delay="">
+                     data-aos-delay="">
                 </div>
-                <div class="col-lg-5 mr-auto p-lg-5 mt-4 mt-lg-0 order-lg-1" data-aos="fade-right"
+{{--                data-aos="fade-right"--}}
+                <div class="col-lg-5 mr-auto p-lg-5 mt-4 mt-lg-0 order-lg-1"
                      data-aos-delay="">
                     <h2 class="mb-3 text-primary">Mission and Vision</h2>
                     <p>We believe in not accepting the status quo, in constant improvement, and in the value of ongoing

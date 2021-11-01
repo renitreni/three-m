@@ -2,7 +2,8 @@
 <div class="site-section" id="contact-section">
     <div class="container">
         <div class="row">
-            <div class="col-12 text-center mb-5" data-aos="fade-up" data-aos-delay="">
+{{--            data-aos="fade-up"--}}
+            <div class="col-12 text-center mb-5" data-aos-delay="">
                 <div class="block-heading-1">
                     <h2>Feedback Section</h2>
                     <span>It is in our utmost interest to provide services for our Client's satisfaction.</span>
@@ -10,7 +11,8 @@
             </div>
         </div>
         <div class="row">
-            <div class="col-lg-6 mb-5" data-aos="fade-up" data-aos-delay="100">
+{{--            data-aos="fade-up"--}}
+            <div class="col-lg-6 mb-5" data-aos-delay="">
                 <form action="#" method="post">
                     <div class="form-group row">
                         <div class="col-md-6 mb-4 mb-lg-0">
