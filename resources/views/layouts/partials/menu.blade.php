@@ -63,8 +63,8 @@
             <div class="me-auto">
                 <nav class="site-navigation text-right ml-auto " role="navigation">
                     <ul class="site-menu main-menu js-clone-nav ml-auto d-none d-lg-block">
-                        <li><a href="{{ route('landing') }}#home-section" class="nav-link">Home</a></li>
-                        <li><a href="{{ route('landing') }}#services-section" class="nav-link">Services</a></li>
+                        <li><a href="{{ route('landing') }}#home-section" class="nav-link">{{ __('Home') }}</a></li>
+                        <li><a href="{{ route('landing') }}#services-section" class="nav-link">{{ __('Services') }}</a></li>
                         {{--                        <li class="has-children">--}}
                         {{--                            <a href="{{ route('landing') }}#about-section" class="nav-link">About</a>--}}
                         {{--                            <ul class="dropdown arrow-top">--}}
@@ -72,11 +72,11 @@
                         {{--                                <li><a href="{{ route('landing') }}#faq-section" class="nav-link">FAQ</a></li>--}}
                         {{--                            </ul>--}}
                         {{--                        </li>--}}
-                        <li><a href="{{ route('landing') }}#galleries" class="nav-link">Galleries</a></li>
-                        <li><a href="{{ route('landing') }}#procedures" class="nav-link">Procedures</a></li>
-                        <li><a href="{{ route('landing') }}#contact-section" class="nav-link">Contact</a></li>
+                        <li><a href="{{ route('landing') }}#galleries" class="nav-link">{{ __('Galleries') }}</a></li>
+                        <li><a href="{{ route('landing') }}#procedures" class="nav-link">{{ __('Procedures') }}</a></li>
+                        <li><a href="{{ route('landing') }}#contact-section" class="nav-link">{{ __('Contact') }}</a></li>
                         <li><a href="{{ route('booking') }}"
-                               class="btn-primary-glowing btn btn-primary rounded-pill px-3 py-2">Book Now!</a></li>
+                               class="btn-primary-glowing btn btn-primary rounded-pill px-3 py-2">{{ __('Book Now!') }}</a></li>
                     </ul>
                 </nav>
             </div>

@@ -4,7 +4,7 @@
             <div class="col-md-7 text-center">
 {{--                data-aos="fade-up"--}}
                 <div class="block-heading-1" data-aos-delay="">
-                    <h2>{{ __('Services') }}</h2>
+                    <h2>{{ __("Services") }}</h2>
                     <p>{{ __('The basis for any successful business is a creative and distinct idea, hence the launch of Luxury Horizon to be the place you trust to take care of your car. In 3M more than one service in one place, this in itself is another sign of excellence.') }}</p>
                 </div>
             </div>

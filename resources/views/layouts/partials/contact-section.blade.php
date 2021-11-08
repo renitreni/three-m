@@ -5,8 +5,8 @@
 {{--            data-aos="fade-up"--}}
             <div class="col-12 text-center mb-5" data-aos-delay="">
                 <div class="block-heading-1">
-                    <h2>Feedback Section</h2>
-                    <span>It is in our utmost interest to provide services for our Client's satisfaction.</span>
+                    <h2>{{ __('Feedback Section') }}</h2>
+                    <span>{{ __("It is in our utmost interest to provide services for our Client's satisfaction.") }}</span>
                 </div>
             </div>
         </div>

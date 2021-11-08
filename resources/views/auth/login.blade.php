@@ -8,6 +8,7 @@
                     <div class="d-table-cell align-middle">
 
                         <div class="text-center mt-4">
+                            <img src="{{ asset('images/3M_lh_logo.jpeg') }}" class="img-fluid">
                             <h1 class="h2">Welcome back!</h1>
                             <p class="lead">
                                 Sign in to your account to continue
