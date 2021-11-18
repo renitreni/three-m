@@ -13,3 +13,20 @@
 .zoom:hover {
     transform: scale(1.5); /* (150% zoom - Note: if the zoom is too large, it will go outside of the viewport) */
 }
+
+.site-section-cover.overlay:before {
+    z-index: -1 !important;
+}
+
+.title-site h1 {
+    background-color: black;
+    font-family: 'Archivo Black', sans-serif !important;
+}
+
+.title-site .fs-4 span{
+    background-color: black;
+}
+
+.btn-lg {
+    font-size: 1.3rem !important;
+}

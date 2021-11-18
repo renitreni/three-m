@@ -83,9 +83,9 @@
             <div class="toggle-button d-inline-block d-lg-none"><a href="#"
                                                                    class="site-menu-toggle py-5 js-menu-toggle text-white"><span
                         class="icon-menu h3"></span></a></div>
-            <div class="site-logo" style="width: 13%">
+            <div class="site-logo" style="width: 20%">
                 <a href="{{ route('landing') }}">
-                    <img src="{{ asset('images/3M_lh_logo.jpeg') }}" class="img-fluid">
+                    <img src="{{ asset('images/3M_lh_logo.png') }}" class="img-fluid">
                 </a>
             </div>
         </div>
