@@ -56,7 +56,7 @@
                 <img src="https://www.investopedia.com/thmb/K1rNR0LxxrnD1Dv0xXSy3qVad2k=/1500x844/smart/filters:no_upscale()/GettyImages-1154092756-e31f198466e443018b44a088ead1250b.jpg"
                      class="img-fluid mx-auto" style="height: 30%;">
                 <div class="fs-5 mx-auto"><label class="text-white fw-bolder">{{ __('Step 4') }}</label></div>
-                <div class="fs-6 mx-auto"><label class="text-white"{{ __('Payment') }}></label></div>
+                <div class="fs-6 mx-auto"><label class="text-white">{{ __('Payment') }}</label></div>
             </div>
         </div>
     </div>
