@@ -92,6 +92,13 @@
                             Copyright &copy; <a href="https://www.facebook.com/YaraMay-CMS-1471889562872452" class="text-white fs-6">Yaramay Maintenance Services <script>document.write(new Date().getFullYear());</script></a>
                         </small>
                     </p>
+                    <p>
+
+                        <small>
+                            Languages:
+                            <a class="btn btn-link">English</a> / <a class="btn btn-link">Arabic</a>
+                        </small>
+                    </p>
                 </div>
             </div>
         </div>
