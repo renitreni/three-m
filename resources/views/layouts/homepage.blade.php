@@ -3,6 +3,8 @@
 <head>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
     <title>{{ config('app.name') }}</title>
+
+    <meta name="description" content="We are a 3M shop at north Riyadh.">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta property="og:title" content="{{ config('app.name') }}">
     <meta property="og:image" content="{{ asset('images/16.jpg') }}">
@@ -16,7 +18,6 @@
     <link rel="stylesheet" href="{{ asset('theme/css/style_2.css') }}">
     <link rel="stylesheet" href="{{ asset('theme/css/main.css') }}">
     <link rel="stylesheet" href="{{ asset('vendor/fontawesome/css/all.min.css') }}">
-
     @yield('header')
 </head>
 <body data-spy="scroll" data-target=".site-navbar-target" data-offset="300">
